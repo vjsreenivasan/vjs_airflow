@@ -1,0 +1,15 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+	"name": "Airflow Dev Container",
+	"build": {
+		"dockerfile": "../Dockerfile",
+		"context": "..",
+		"args": {
+			"VARIANT": "2.5.1"
+		}
+	},
+	"postCreateCommand": "pip install --no-cache-dir --user -r requirements.txt",
+	"remoteUser": "airflow"
+}
+  
